@@ -1,1 +1,6 @@
-// 4:30 @ 72 HomePage and Directory Component
+.directory-menu {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
