@@ -5,7 +5,7 @@ import logger from 'redux-logger';
 import rootReducer from '../root-reducer';
 
 
-// Thunk like middleware
+// logger middleware is like redux tool to see state
 const middlewares = [logger];
 
 
