@@ -13,7 +13,7 @@ import './header.styles.scss';
 
 
 
-const Header = ({ currentUser }) => (
+const Header = ({ currentUser, hidden }) => (
   <div className="header">
     <Link className='logo-container' to='/'>
       <Logo className='logo' />
@@ -40,14 +40,17 @@ const Header = ({ currentUser }) => (
       <CartIcon />
     </div>
 
-    <CartDropdown />
+    {
+      hidden ? null : (<CartDropdown />)
+    }
   </div>
 );
 
 
 // old way of using redux with mapStateToProps newer versions dont require this... (state) is the root-reducer
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser: currentUser,
+  hidden: hidden
 })
 
 
