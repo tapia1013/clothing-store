@@ -33,3 +33,4 @@ const mapStateToProps = ({ cart: { cartItems } }) => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartIcon)
 
+// installed reselect video 133 Reselect Library 4/27/22
